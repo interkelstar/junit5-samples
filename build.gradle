@@ -1,0 +1,37 @@
+group 'jprof'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext {
+        junitVersion = 'M3'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.junit.platform:junit-platform-gradle-plugin:1.0.0-${junitVersion}"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.0.0-${junitVersion}"
+    testCompile "org.mockito:mockito-core:2.2.28"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.0.0-${junitVersion}"
+}
+
+junitPlatform {
+    filters {
+        tags {
+            exclude 'jenkins'
+        }
+    }
+}
