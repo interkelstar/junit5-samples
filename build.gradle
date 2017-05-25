@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     ext {
-        junitVersion = 'M3'
+        junitVersion = 'M4'
     }
     repositories {
         mavenCentral()
