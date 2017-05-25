@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     testCompile "org.junit.jupiter:junit-jupiter-api:5.0.0-${junitVersion}"
+    testCompile "org.junit.jupiter:junit-jupiter-params:5.0.0-${junitVersion}"
     testCompile "org.mockito:mockito-core:2.2.28"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:5.0.0-${junitVersion}"
 }
